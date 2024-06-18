@@ -1,3 +1,7 @@
+* {
+    margin: 0;
+    padding: 0;
+}
 body {
     color: #FFFFFF;
     font-family: "Inter", sans-serif;
@@ -13,7 +17,58 @@ body {
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.progress-bar {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    color: #FFFFFF;
+    background:#3579F5;
+
+}
+
+.percent svg {
+    position: relative;
+    width: 60px;
+    height: 60px;
+}
+
+.percent svg circle{
+    width: 60px;
+    height: 60px;
+    fill: none;
+    stroke-width: 1;
+    stroke: #FFFFFF;
+    stroke-dasharray: 200;
+    stroke-dashoffset: 200;
+}
+
+.percent svg circle:nth-child(1) {
+    stroke-dashoffset: 0;
+    stroke: rgba(255, 255, 255, 0.5);
+}
+
+.percent svg circle:nth-child(2) {
+    stroke-dashoffset: calc(200-(200 * 40) / 1);
+    stroke: #FFFFFF;
+}
+
+.progress-bar-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    font-size: 20px;
+    line-height: 150%;
 }
 
 .card-main-info {
@@ -44,4 +99,14 @@ body {
     width: 389px;
     height: 18px;
     line-height: 150%;
+}
+
+.card-button {
+    border-radius: 6px;
+    width: 170px;
+    padding: 10px 32px;
+    background: #f4f8ff;
+    color: #4777ed;
+    font-size: 14px;
+    line-height: 143%;
 }
